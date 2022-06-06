@@ -18,6 +18,11 @@ namespace MVCApp.Controllers
             return View(doggo);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         public string Hello()
         {
             return "Who's there?";
