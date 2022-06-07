@@ -11,16 +11,27 @@ namespace MVCApp.Controllers
 {
     public class HelloWorldController : Controller
     {
-        // GET: /<controller>/
+
+        private static List<DogViewModel> dogs = new List<DogViewModel>();
+
         public IActionResult Index()
         {
-            DogViewModel doggo = new DogViewModel() { Name = "Boy", Age = 2 };
-            return View(doggo);
+            // Pass the list with dogs models
+            return View(dogs);
         }
 
         public IActionResult Create()
         {
-            return View();
+            var dogVm = new DogViewModel();
+            return View(dogVm);
+        }
+
+        public IActionResult CreateDog(DogViewModel dogViewModel)
+        {
+            // return View("Index");
+            // RedirectToAction helps to call or redirect to the specified View
+            dogs.Add(dogViewModel);
+            return RedirectToAction(nameof(Index));
         }
 
         public string Hello()
