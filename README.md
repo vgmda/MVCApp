@@ -1,6 +1,6 @@
 # MVCApp
 
-ASP.NET Core MVC web development with controllers and views. MVC is a design pattern used to decouple user interface (view), data (model) and application logic (controller). Create an HTML form based on the data model. 
+> ASP.NET Core MVC web development with controllers and views. MVC is a design pattern used to decouple user interface (view), data (model) and application logic (controller). Create an HTML form based on the data model. 
 
 The project consists of:
 
